@@ -1,0 +1,15 @@
+language: php
+
+## PHP versions we test against
+php:
+  - 7.0
+  - 7.1
+  - nightly
+
+## Install or update dependencies
+install:
+  - composer install --prefer-dist; fi;
+  - composer show
+
+## Run the actual test
+script: ./vendor/bin/phpunit
